@@ -79,7 +79,7 @@
     <div class="resumen">
       <span class="opcion">👨‍🌾 Distribuidores</span>
       <span class="descripcion">
-        Operaciones CRUD de Armas en una BD.
+        Operaciones CRUD de distribuidores en una BD.
       </span>
     </div>
   </Link>
@@ -88,7 +88,7 @@
     <div class="resumen">
       <span class="opcion">🌿 Plantas</span>
       <span class="descripcion">
-        Operaciones CRUD de Municiones en una BD.
+        Operaciones CRUD de pantas en una BD.
       </span>
     </div>
   </Link>
