@@ -1,18 +1,15 @@
 <script>
   import { onMount, getContext } from "svelte";
   import { jsonData }            from "./store.js";
-
   export let tipo = "insertar"; // insertar, modificar, eliminar
-  export let coleccion = "articulos"; // articulos, clientes
+  export let coleccion = "distribuidores"; // distribuidores, plantas
   export let documento = {};
   
  
   let handler = () => {};  
   let clases = "";
   let url = "";
-
   const URL = getContext("URL"); 
-
   onMount(() => {
     switch (tipo) {
       case "insertar":
@@ -29,14 +26,12 @@
         break;
       default:
     }
-
     switch (coleccion) {
-      case "articulos": url=URL.articulos; break;
-      case "clientes": url=URL.clientes; break;
+      case "distribuidores": url=URL.distribuidores; break;
+      case "plantas": url=URL.plantas; break;
       default:
     }
   });
-
   function insertar() {
     if (
       Object.keys(documento).length > 1 &&
@@ -55,7 +50,6 @@
         .catch(err => ko());
     }
   }
-
   function modificar() {
     fetch(url + documento._id, {
       method: "PUT",
@@ -66,7 +60,6 @@
       .then(data => ok())
       .catch(err => ko());
   }
-
   function eliminar() {
     fetch(url + documento._id, { method: "DELETE" })
       .then(res => res.json())
@@ -76,12 +69,10 @@
       })
       .catch(err => ko());
   }
-
   let ok = () => {
     OK.style.display = "block";
     setTimeout(() => (OK.style.display = "none"), 1500);
   }
-
   let ko = () => {
     KO.style.display = "block";
     setTimeout(() => (KO.style.display = "none"), 1500);
@@ -98,11 +89,9 @@
     font-size: 1em;
     transition: all 0.3s ease-in-out;
   }
-
   .btn:hover {
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   }
-
   /* Botón para insertar */
   .btn-insertar {
     border: 1px solid #13a600;
@@ -118,7 +107,6 @@
   .btn-insertar:hover {
     background: #c1ffc9;
   }
-
   /* Botón para modificar */
   .btn-modificar {
     border: 1px solid #0085a6;
@@ -134,7 +122,6 @@
   .btn-modificar:hover {
     background: #a8e7f5;
   }
-
   /* Botón para eliminar */
   .btn-eliminar {
     border: 1px solid #ec0115;
@@ -150,7 +137,6 @@
   .btn-eliminar:hover {
     background: #ffc1bf;
   }
-
   @media (max-width: 500px) {
     .btn-insertar::after,
     .btn-modificar::after,

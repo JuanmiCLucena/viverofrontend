@@ -5,16 +5,14 @@
   import Contenido      from "./Contenido.svelte";
   
   const URL = {
-    articulos :  "https://vivero-api.herokuapp.com/api/distribuidores/",
-    clientes :   "https://vivero-api.herokuapp.com/api/plantas/"
+    distribuidores :  "https://vivero-api.herokuapp.com/api/distribuidores/",
+    plantas :   "https://vivero-api.herokuapp.com/api/plantas/"
   };
-
   setContext("URL", URL);
 </script>
 
 <style>
   @import url("https://fonts.googleapis.com/css?family=Aclonica");
-
   :global(body) {
     margin: 0;
     padding: 0;
@@ -23,17 +21,14 @@
     font-family: "Aclonica";
     font-display: swap;     /* Para mejorar rendimiento en carga inicial */
   }
-
   :global(*) {
     margin: 0;
     padding: 0;
   }
-
   :global(a:hover) {
     text-decoration: none;
     cursor: pointer;
   }
-
   :global(div#OK, div#KO) {
     display: none;
     position: fixed;
@@ -48,5 +43,5 @@
   <Nav />
   <Contenido />
 </Router>
-<div id="OK">😊</div>
-<div id="KO">😟</div>
+<div id="OK">👨‍🌾</div>
+<div id="KO">🌿</div>

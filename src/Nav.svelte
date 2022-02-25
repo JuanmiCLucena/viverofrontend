@@ -69,8 +69,8 @@
     }
 
     .inicio::after,
-    .articulos::after,
-    .clientes::after {
+    .distribuidores::after,
+    .plantas::after {
       display: inline-block;
       padding-left: 10px;
     }
@@ -78,11 +78,11 @@
     .inicio::after {
       content: "Inicio";
     }
-    .articulos::after {
-      content: "Artículos";
+    .distribuidores::after {
+      content: "Distribuidores";
     }
-    .clientes::after {
-      content: "Clientes";
+    .plantas::after {
+      content: "Plantas";
     }
   }
   /* PC */
@@ -109,13 +109,13 @@
       </Link>
     </li>
     <li class="item active">
-      <Link to="/articulos">
-        <span class="articulos">🎁</span>
+      <Link to="/distribuidores">
+        <span class="distribuidores">👨‍🌾</span>
       </Link>
     </li>
     <li class="item active">
-      <Link to="/clientes">
-        <span class="clientes">👥</span>
+      <Link to="/plantas">
+        <span class="plantas">🌿</span>
       </Link>
     </li>
   </ul>

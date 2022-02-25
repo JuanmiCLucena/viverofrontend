@@ -11,7 +11,6 @@
   div {
     padding: 30px;
   }
-
   .bloque {
     display: flex;
     flex-direction: column;
@@ -27,7 +26,6 @@
     border: 1px solid rgb(245, 177, 31);
     border-radius: 4px;
   }
-
   .opcion {
     display: flex;   
     word-break: break-word;
@@ -42,7 +40,6 @@
     min-width: 140px;
     padding: 10px;
   }
-
   .descripcion {
     font-size: 14px;
     flex: 1 1 auto;
@@ -54,7 +51,7 @@
   }
 </style>
 
-<h1>Tienda Frontend</h1>
+<h1>Vivero - Frontend</h1>
 <p>
   <small>
     <b>Progressive Web App (PWA)</b>
@@ -63,8 +60,8 @@
 <p>
   <small>
     Backend en
-    <a href="https://tiendabackend.herokuapp.com">
-      https://tiendabackend.herokuapp.com
+    <a href="https://vivero-api.herokuapp.com/api/distribuidores/">
+      https://vivero-api.herokuapp.com/api/distribuidores
     </a>
   </small>
 </p>
@@ -78,20 +75,20 @@
     </div>
   </Link>
 
-  <Link to="/articulos">
+  <Link to="/distribuidores">
     <div class="resumen">
-      <span class="opcion">🎁 Artículos</span>
+      <span class="opcion">👨‍🌾 Distribuidores</span>
       <span class="descripcion">
-        Operaciones CRUD de artículos en una BD.
+        Operaciones CRUD de Armas en una BD.
       </span>
     </div>
   </Link>
 
-  <Link to="/clientes">
+  <Link to="/plantas">
     <div class="resumen">
-      <span class="opcion">👥 Clientes</span>
+      <span class="opcion">🌿 Plantas</span>
       <span class="descripcion">
-        Operaciones CRUD de clientes en una BD.
+        Operaciones CRUD de Municiones en una BD.
       </span>
     </div>
   </Link>
@@ -101,8 +98,8 @@
   <small>
     <b>
       Código fuente en
-      <a href="https://github.com/jamj2000/tiendafrontend">
-        https://github.com/jamj2000/tiendafrontend
+      <a href="https://github.com/JuanmiCLucena/viverofrontend">
+        https://github.com/JuanmiCLucena/viverofrontend
       </a>
     </b>
   </small>
